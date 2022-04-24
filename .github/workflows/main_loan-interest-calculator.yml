@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'Loan-Interest-Calculator'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_71B96EC2F43040FF938C5187F1041D42 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_15122FC8FD1641ABA1D2402D280BD302 }}
