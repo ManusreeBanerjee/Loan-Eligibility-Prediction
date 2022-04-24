@@ -24,19 +24,19 @@ st.markdown(html_temp, unsafe_allow_html = True)
 st.subheader('by Manusree Banerjee')
       
 # following lines create boxes in which user can enter data required to make prediction
-custid=st.sidebar.number_input("Customer ID",min_value=0)
-amt_reqstd = st.sidebar.number_input('Amount requested', min_value=0, max_value=50000, step=1)
-amt_fund = st.sidebar.number_input('Amount funded by investors', min_value=0, max_value=50000, step=1)
-loan_len = st.sidebar.slider('Loan length', min_value=0, max_value=30)
+custid=st.sidebar.text_input("Customer ID")
+amt_reqstd = st.sidebar.number_input('Amount requested (in $)', min_value=0, max_value=50000, step=1)
+amt_fund = st.sidebar.number_input('Amount funded by investors (in $)', min_value=0, max_value=50000, step=1)
+loan_len = st.sidebar.slider('Loan length (in months)', min_value=0, max_value=30)
 loan_purp = st.sidebar.selectbox('Loan purpose', ('Car', 'Credit card', 'Debt consolidation', 'Educational', 'Home improvement', 'House', 'Major purchase', 'Medical', 'Moving', 'Renewable energy', 'Small business', 'Vacation',  'Wedding',  'Other'))
 debt_inc_ratio = st.sidebar.slider('Debt to income ratio', min_value=0, max_value=40)
 hom_own = st.sidebar.selectbox('Home ownership', ('MORTGAGE', 'RENT', 'OWN', 'OTHER', 'NONE'))
-mon_inc = st.sidebar.number_input('Monthly income')
+mon_inc = st.sidebar.number_input('Monthly income (in $)')
 fico = st.sidebar.slider('FICO score', min_value=350, max_value=850)
 cred_line = st.sidebar.slider('Open credit lines', min_value=0, max_value=40)
-cred_bal = st.sidebar.number_input('Revolving credit balance')
+cred_bal = st.sidebar.number_input('Revolving credit balance (in $)')
 inq_6_mont = st.sidebar.slider('Inquiries in last 6 months', min_value=0, max_value=15)
-emp_len = st.sidebar.selectbox('Employment length in years', ('<1', '2', '3', '4', '5', '6', '7', '8', '9', '>10', 'na'))
+emp_len = st.sidebar.selectbox('Employment length (in years)', ('<1', '2', '3', '4', '5', '6', '7', '8', '9', '>10', 'na'))
 
 
 
