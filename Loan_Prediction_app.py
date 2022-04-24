@@ -65,7 +65,7 @@ if st.button("PREDICT"):
     #load the model from disk
     loaded_model = joblib.load("gboost.pkl")
     int_rate = loaded_model.predict(user_input) 
-    st.write("Interest Rate assigned is ",round(int_rate[0],2))
+    st.write("Interest Rate assigned is % per annum.",round(int_rate[0],2))
     
 
 
