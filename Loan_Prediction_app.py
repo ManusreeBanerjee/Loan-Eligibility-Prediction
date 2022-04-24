@@ -5,7 +5,7 @@ import numpy as np
 import pickle
 from dateutil.relativedelta import relativedelta
 from sklearn.preprocessing import LabelEncoder
-from gsheetsdb import connect
+
 
 
 st.set_page_config(page_title="Loan Interest Prediction App",page_icon="💲",layout="centered",initial_sidebar_state="expanded")
@@ -85,8 +85,3 @@ st.info("Enter the required fields and click on the 'PREDICT' button to calculat
 
 
 st.caption("Caution: This is just a prediction and may not be exact.")
-
-gsheet_url = "https://docs.google.com/spreadsheets/d/16-R8PiFlhFYpvHUP1jOAzYn-0SDGkOjQIbjl5ERsuTg/edit#gid=0"
-conn = connect()
-rows = conn.execute(f'SELECT * FROM "{gsheet_url}"')
-df_gsheet = userinput
