@@ -10,7 +10,7 @@ from sklearn.preprocessing import LabelEncoder
 
 st.set_page_config(page_title="Loan Interest Prediction App",page_icon="💲",layout="centered",initial_sidebar_state="expanded")
 
-st.sidebar.header('User Input Parameters')
+st.sidebar.header('Enter Client Parameters')
    
     # front end elements of the web page 
 html_temp = """ 
@@ -24,7 +24,7 @@ st.markdown(html_temp, unsafe_allow_html = True)
 st.subheader('by Manusree Banerjee')
       
 # following lines create boxes in which user can enter data required to make prediction
-custid=st.sidebar.number_input("Customer ID",format="%i")
+custid=st.sidebar.number_input("Customer ID",value=int)
 amt_reqstd = st.sidebar.number_input('Amount requested', min_value=0, max_value=50000, step=1)
 amt_fund = st.sidebar.number_input('Amount funded by investors', min_value=0, max_value=50000, step=1)
 loan_len = st.sidebar.slider('Loan length', min_value=0, max_value=30)
