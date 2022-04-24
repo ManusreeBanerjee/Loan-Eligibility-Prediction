@@ -64,8 +64,8 @@ if st.button("PREDICT"):
     loaded_model = pickle.load(open(gboost.pkl, 'rb'))
     int_rate = loaded_model.predict(user_input) 
     st.write("Interest Rate assigned is ",np(int_rate[0],0))
-else:
-    st.write("!!!Loan not approved!!!")
+    if np(int_rate[0],0)>=40  
+      st.write("!!!Loan not approved!!!")
 
 
 
