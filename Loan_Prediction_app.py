@@ -6,7 +6,7 @@ import pickle
 from dateutil.relativedelta import relativedelta
 from sklearn.preprocessing import LabelEncoder
 # import the lib to Save/Load the model
-from sklearn.externals import joblib 
+import joblib 
 
 
 
