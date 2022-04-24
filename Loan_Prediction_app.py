@@ -61,7 +61,7 @@ else :
 if st.button("PREDICT"):
     user_input=[[amt_reqstd,amt_fund,loan_len,purpose,debt_inc_ratio,ownership,mon_inc,fico,cred_line,cred_bal,inq_6_mont,emp_len]]
     #load the model from disk
-    loaded_model = pickle.load(open(gboost.pkl, 'rb'))
+    loaded_model = pickle.load(open("gboost.pkl", 'rb'))
     int_rate = loaded_model.predict(user_input) 
     st.write("Interest Rate assigned is ",np(int_rate[0],0))
     
