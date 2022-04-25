@@ -1,0 +1,6 @@
+ # front end elements of the web page 
+html_temp = """ 
+    <div style ="background-color:light blue;padding:13px"> 
+    <h1 style ="color:pink;text-align:center;">Loan Interest Prediction App</h1> 
+    </div> 
+    """
